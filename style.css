@@ -208,3 +208,6 @@ header .logo
   }
 }
 
+.scrollable-element {
+  scrollbar-color: blue yellow;
+}
