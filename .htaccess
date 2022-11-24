@@ -1,6 +1,0 @@
-#remove html file extension https://inkrealm.cloud/faw.html
-# to https://inkrealm.cloud/faw
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^\.]+)$ $1.html [NC, L]
