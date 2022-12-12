@@ -1,3 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Template</title>
+  <style>
+    /* Add styles here */
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: url(video.mp4) no-repeat;
+      background-size: cover;
+    }
+    img {
+      border-radius: 50%; /* Makes the images round */
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to my Website</h1>
+  <p>Here are some images:</p>
+  <img src="image1.jpg" alt="Image 1">
+  <img src="image2.jpg" alt="Image 2">
+  <img src="image3.jpg" alt="Image 3">
+
+  
 import * as React from 'react';
 import { useState } from 'react';
 
@@ -53,4 +80,10 @@ const RulesOfChess = () => {
       <p>Players move their pieces according to specific rules. The rook can move any number of squares along a rank or file. The bishop can move any number of squares diagonally. The queen can move any number of squares along a rank, file, or diagonal. The king can move one square in any direction. The knight moves to any of the squares immediately adjacent to it, then makes a separate, 90-degree turn and moves to an adjacent square on that line, essentially moving in an "L" shape.</p>
       <p>Other rules of chess include:</p>
       <ul>
-        <li>Pawns have the most complex rules of movement and capture. They can move forward to the unoccupied square immediately in front of them on the same file, or on its first move it can advance two squares
+        <h2>And here's an HTML5 audio player:</h2>
+  <audio controls>
+    <source src="song.mp3" type="audio/mpeg">
+    Sorry, your browser doesn't support HTML5 audio.
+  </audio>
+</body>
+</html>
