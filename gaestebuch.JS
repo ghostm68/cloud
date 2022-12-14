@@ -3,7 +3,7 @@ function Gaestebuch() {
 		gaestebuch.push(post);
 	}
 	this.show = function() {
-		$('#output').html('');
+		$('#output').html('https://www.inkrealm.cloud/twittery.html');
 			for(post in gaestebuch) {
 				$('#output').append(
 					$('<table />').attr({'class':'post','id': 'post-' + gaestebuch[post].id})
