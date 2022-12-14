@@ -1,4 +1,3 @@
-
 function Gaestebuch() {
 	this.add = function(post) {
 		gaestebuch.push(post);
