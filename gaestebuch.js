@@ -1,4 +1,6 @@
-this.add = function(post) {
+
+function Gaestebuch() {
+	this.add = function(post) {
 		gaestebuch.push(post);
 	}
 	this.show = function() {
