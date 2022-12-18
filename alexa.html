@@ -1,309 +1,177 @@
- <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!--==================== UNICONS ====================-->
-        
-        
-        <!--==================== SWIPER CSS ====================-->
-        <link rel="stylesheet" href="">
-        
-        <!--==================== CSS ====================-->
-        <link rel="stylesheet" href="">
-
-        <title>Responsive Portfolio Website</title>
-    </head>
-     <style>
-      /*==================== GOOGLE FONTS ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
-
-/*==================== VARIABLES CSS ====================*/
-:root {
-    --header-height: 3rem;
-
-    /*========== Colors ==========*/
-    /* Change favorite color */
-    --hue-color: 250; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
-
-    /* HSL color mode */
-    --first-color: hsl(var(--hue-color), 69%, 61%);
-    --first-color-second: hsl(var(--hue-color), 69%, 61%);
-    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
-    --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
-    --title-color: hsl(var(--hue-color), 8%, 15%);
-    --text-color: hsl(var(--hue-color), 8%, 45%);
-    --text-color-light: hsl(var(--hue-color), 8%, 65%);
-    --input-color: hsl(var(--hue-color), 70%, 96%);
-    --body-color: hsl(var(--hue-color), 60%, 99%);
-    --container-color: #fff;
-    --scroll-bar-color: hsl(var(--hue-color), 12%, 90%);
-    --scroll-thumb-color: hsl(var(--hue-color), 12%, 80%);
-
-    /*========== Font and typography ==========*/
-    --body-font: 'Poppins', sans-serif;
-
-    /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-    --big-font-size: 2rem;
-    --h1-font-size: 1.5rem;
-    --h2-font-size: 1.25rem;
-    --h3-font-size: 1.125rem;
-    --normal-font-size: .938rem;
-    --small-font-size: .813rem;
-    --smaller-font-size: .75rem;
-
-    /*========== Font weight ==========*/
-    --font-medium: 500;
-    --font-semi-bold: 600;
-
-    /*========== Margenes Bottom ==========*/
-    /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-    --mb-0-25: .25rem;
-    --mb-0-5: .5rem;
-    --mb-0-75: .75rem;
-    --mb-1: 1rem;
-    --mb-1-5: 1.5rem;
-    --mb-2: 2rem;
-    --mb-2-5: 2.5rem;
-    --mb-3: 3rem;
-
-    /*========== z index ==========*/
-    --z-tooltip: 10;
-    --z-fixed: 100;
-    --z-modal: 1000;
+ 
+  <style type="text/css">
+       body {
+	background:#ccc;
+  margin:0;
+}
+.homepage-bg {
+	width:100%;
+	height:100%;
+	min-height:100%;
+	position:fixed;
+  background-size:cover;
+}
+#main {
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+#main-header {
+	float:left;
+	width:100%;
+	background:#000;
+	min-height:80px;
+}
+.center {
+	max-width:600px;
+	width: 100%;
+	margin: 0 auto;
+}
+#main-content {
+	display: block;
+	width: 100%;
+	height: 100%;
+	float:left;
+	min-height:100%;
 }
 
-/* Font size for large devices */
-@media screen and (min-width: 968px) {
-    :root {
-        --big-font-size: 3rem;
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.5rem;
-        --h3-font-size: 1.25rem;
-        --normal-font-size: 1rem;
-        --small-font-size: .875rem;
-        --smaller-font-size: .813rem;
-    }
+/*------------------------------------*\
+	MOBILE NAVIGATION
+\*------------------------------------*/
+
+.menu {
+	display:block;
+	position:relative;
+	float:right;
+	width:70%;
 }
 
-/*========== Variables Dark theme ==========*/
-
-
-/*========== Button Dark/Light ==========*/
-
-
-/*==================== BASE ====================*/
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.triggernav {
+	float:right;
+}
+.triggernav a {
+	float:left;
+	height:40px;
+	width:40px;
+	margin:20px 0;
+	background:#fff;
+}
+.menu-title {
+	float:left;
+	margin-left:10px;
+	line-height:80px;
+	color:#fff;
+}
+.toggle-containernav {
+	position:absolute;
+	top:80px;
+	width:100%;
+	z-index:25;
+	background:#333;
+  margin-bottom:40px;
+}
+.toggle-containernav ul {
+	float:left;
+	width:100%;
+  list-style:none;
+}
+.toggle-containernav li {
+	float:left;
+  display:inline-block;
+  width:100%;
+	padding:15px 0;
+	color:#fff;
 }
 
-html {
-  scroll-behavior: smooth;
+/*------------------------------------*\
+	FEATURED CENTERED IMAGE
+\*------------------------------------*/
+
+#featured {
+	width: 100%;
+	height: 100%;
+  display:block;
 }
-
-body {
-  margin: 0 0 var(--header-height) 0;
-  font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
+#featured a {
+	display:block;
+	width:100%;
+	height:100%;
 }
-
-h1, h2, h3, h4 {
-  color: var(--title-color);
-  font-weight: var(--font-semi-bold);
+#featured img {
+	position:relative;
+  display:block;
+	max-width:60%;
+	top: 10%;
+	left: 10%;
+  background:#fff;
 }
-
-ul {
-  list-style: none;
+#featured img:empty {
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
-
-a {
-  text-decoration: none;
+@media screen and (orientation: portrait) {
+#home-featured img { max-width: 60%; }
 }
-
-img {
-  max-width: 100%;
-  height: auto;
+@media screen and (orientation: landscape) {
+#home-featured img { max-height: 60%; }
 }
+    </style>
+<body>
 
-/*==================== REUSABLE CSS CLASSES ====================*/
-.section {
-  padding: 2rem 0 4rem;
-}
+<div class="homepage-bg" style="background:url('http://www.publicdomainpictures.net/pictures/90000/velka/world-map-13995569307YW.jpg') bottom center no-repeat; background-size:cover;">
+</div><!--homepage-bg-->
 
-.section__title {
-  font-size: var(--h1-font-size);
-  color: var(--title-color);
-}
+<div id="main">
 
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
-  margin-bottom: var(--mb-3);
-}
+<div id="main-header">
+<div class="center">
 
-.section__title, 
-.section__subtitle {
-  text-align: center;
-}
+<nav class="menu">
 
-/*==================== LAYOUT ====================*/
-.container {
-  max-width: 768px;
-  margin-left: var(--mb-1-5);
-  margin-right: var(--mb-1-5);
-}
+<div class="triggernav">
+<a href="#"></a>
+<span class="menu-title">Menu</span>
+</div><!--triggernav-->
 
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
+<div class="toggle-containernav">
+<div class="menu-container">
 
-.header {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: var(--z-fixed);
-  background-color: var(--body-color);
-}
+<ul>
+<li>Menu Item 1</li>
+<li>Menu Item 2</li>
+<li>Menu Item 3</li>
+<li>Menu Item 4</li>
+<li>Menu Item 5</li>
+<li>Menu Item 6</li>
+<li>Menu Item 7</li>
+<li>Menu Item 8</li>
+<li>Menu Item 9</li>
+<li>Menu Item 10</li>
+<li>Menu Item 11</li>
+<li>Menu Item 12</li>
+</ul>
 
-/*==================== NAV ====================*/
+</div><!--menu-container-->
+</div><!--toggle-containernav-->
 
+</nav><!--menu-->
+</div><!--center-->
+</div><!--main-header-->
 
-/* show menu */
+<div id="main-content">
 
+<figure id="featured">
+<a><img src="https://dummyimage.com/hd1080" alt="" /></a>
+</figure>
 
-/* Active link */
+</div><!--main-content-->
 
 
-/* Change background header */
+</div><!--main-->
 
-
-/*==================== HOME ====================*/
-
-
-/*==================== BUTTONS ====================*/
-
-
-/*==================== ABOUT ====================*/
-
-
-/*==================== SKILLS ====================*/
-
-
-/*==================== QUALIFICATION ====================*/
-
-
-/*==================== SERVICES ====================*/
-
-
-/* Active Modal */
-
-
-/*==================== PORTFOLIO ====================*/
-
-
-/*==================== PROJECT IN MIND ====================*/
-
-
-/*==================== TESTIMONIAL ====================*/
-
-
-/*==================== CONTACT ME ====================*/
-
-
-/*==================== FOOTER ====================*/
-
-
-/*========== SCROLL UP ==========*/
-
-
-/* Show scroll */
-
-
-/*========== SCROLL BAR ==========*/
-
-
-/*==================== MEDIA QUERIES ====================*/
-/* For small devices */
-
-
-/* For medium devices */
-
-
-      /* For large devices */</style>
-    <body>
-        <!--==================== HEADER ====================-->
-        <header class="header" id="header">
-            
-        </header>
-
-        <!--==================== MAIN ====================-->
-        <main class="main">
-            <!--==================== HOME ====================-->
-            <section class="home section" id="home">
-                
-            </section>
-
-            <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
-                
-            </section>
-
-            <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
-
-            </section>
-
-            <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
-
-            </section>
-
-            <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
-                
-            </section>
-
-            <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
-                
-            </section>
-
-            <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
-
-            </section>
-
-            <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
-                
-            </section>
-
-            <!--==================== CONTACT ME ====================-->
-            <section class="contact section" id="contact">
-
-            </section>
-        </main>
-
-        <!--==================== FOOTER ====================-->
-        <footer class="footer">
-         
-        </footer>
-        
-        <!--==================== SCROLL TOP ====================-->
-        
-
-        <!--==================== SWIPER JS ====================-->
-        <script src=""></script>
-
-        <!--==================== MAIN JS ====================-->
-        <script src=""></script>
-    </body>
-</html>
-
+</body>
