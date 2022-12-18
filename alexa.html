@@ -4,10 +4,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Fullscreen Navigation With Background Image Switching Example</title>
+    <title>untitled</title>
     
     <!--jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script>
+  $('.navi li').mouseenter(function () {
+  var changeImage = $(this).attr('data-image')
+  $('.photo').css({
+    'background-image': 'url(' + changeImage + ')'
+  })
+})
+$('.navi li').mouseleave(function () {
+  $('.photo').css({
+    'background-image': ''
+  })
+})
+ </script>
 </head>
 <style type="css">
  .navi {
@@ -48,7 +61,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: url(initial.jpg);
+  background: url(https://github.com/ghostm68/cloud/blob/main/VAPORGRAM1671229956501.gif);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -58,28 +71,14 @@
 <body>
     <div class="container">
         <ul class="navi">
-            <li data-image="https://www.jqueryscript.net/dummy/7.jpg"><a href="#none" data-text="JQUERY">JQUERY</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/8.jpg"><a href="#none" data-text="SCRIPT">SCRIPT</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/9.jpg"><a href="#none" data-text="NET">NET</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/10.jpg"><a href="#none" data-text="EXAMPLE">EXAMPLE</a></li>
+            <li data-image="https://github.com/ghostm68/cloud/blob/main/VAPORGRAM1669371456651.gif"><a href="#none" data-text="JQUERY">zero</a></li>
+            <li data-image="https://github.com/ghostm68/cloud/blob/main/VAPORGRAM1671073191770.jpg"><a href="#none" data-text="SCRIPT">one</a></li>
+            <li data-image="https://github.com/ghostm68/cloud/blob/main/VAPORGRAM1671229783604.gif"><a href="#none" data-text="NET">two</a></li>
+            <li data-image="https://github.com/ghostm68/cloud/blob/main/VAPORGRAM1671229830508.gif"><a href="#none" data-text="EXA">threE</a></li>
         </ul>
         <div class="photo"></div>
     </div>
-
-    <script>
-        $('.navi li').mouseenter(function () {
-            var changeImage = $(this).attr('data-image')
-
-            $('.photo').css({
-                'background-image': 'url(' + changeImage + ')'
-            })
-        })
-        $('.navi li').mouseleave(function () {
-            $('.photo').css({
-                'background-image': ''
-            })
-        })
-    </script>
+ 
 </body>
 
 </html>
