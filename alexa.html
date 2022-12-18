@@ -1,25 +1,60 @@
-body, html {
-  height: 100%;
-}
 
-.bg {
-  /* The image used */
-  background-image: url("https://www.pw.org/files/styles/directory_profile/public/writers/japp.jpg?itok=m5pZpi2h");
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Define styles for the body element */
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #333;
+        font-family: sans-serif;
+      }
 
-  /* Full height */
-  height: 100%;
+      /* Define styles for the header element */
+      header {
+        height: 50px;
+        background-color: #ccc;
+        color: #333;
+        text-align: center;
+        line-height: 50px;
+      }
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
+      /* Define styles for the main element */
+      main {
+        display: flex;
+      }
 
-<p>
-  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
-  change the style of a button used to toggle fullscreen mode on and off,
-  entirely using CSS.
-</p>
+      /* Define styles for the left and right sections in the main element */
+      main section {
+        flex: 1;
+        height: calc(100vh - 50px);
+        background-size: cover;
+        background-position: center;
+      }
 
-<button id="fs-toggle">Toggle Fullscreen</button>
+      /* Define styles for the left section in the main element */
+      main section.left {
+        background-image: url("https://www.pw.org/files/styles/directory_profile/public/writers/japp.jpg?itok=m5pZpi2h");
+      }
+
+      /* Define styles for the right section in the main element */
+      main section.right {
+        background-image: url("https://www.wordstar.gq/5379e792-a434-4666-8e51-bb8e41de678b_inky_gif.gif");
+      }
+
+      /* Define styles for the footer element */
+      footer {
+        height: 50px;
+        background-color: #ccc;
+        color: #333;
+        text-align: center;
+        line-height: 50px;
+      }
+
+      /* Define styles for the cursor element */
+      cursor {
+        position: fixed;
+</body>
+</HTML>
