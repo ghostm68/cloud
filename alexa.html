@@ -1,42 +1,25 @@
+body, html {
+  height: 100%;
+}
 
-<!DOCTYPE html>
-<html lang="en">
+.bg {
+  /* The image used */
+  background-image: url("https://www.pw.org/files/styles/directory_profile/public/writers/japp.jpg?itok=m5pZpi2h");
 
-<head>
-    <meta charset="UTF-8">
-    <title>Frl</title>
-    <link rel="stylesheet" href="style.css">
-    <!--jQuery CDN -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-</head>
+  /* Full height */
+  height: 100%;
 
-<body>
-    <div class="container">
-        
-        <ul class="navi">
-            <li data-image="https://www.jqueryscript.net/dummy/7.jpg"><a href="#none" data-text="JQUERY">JQUERY</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/8.jpg"><a href="#none" data-text="SCRIPT">SCRIPT</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/9.jpg"><a href="#none" data-text="NET">NET</a></li>
-            <li data-image="https://www.jqueryscript.net/dummy/10.jpg"><a href="#none" data-text="EXAMPLE">EXAMPLE</a></li>
-        </ul>
-        <div class="photo"></div>
-    </div>
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+<h1>MDN Web Docs Demo: :fullscreen pseudo-class</h1>
 
-    <script>
-        $('.navi li').mouseenter(function () {
-            var changeImage = $(this).attr('data-image')
+<p>
+  This demo uses the <code>:fullscreen</code> pseudo-class to automatically
+  change the style of a button used to toggle fullscreen mode on and off,
+  entirely using CSS.
+</p>
 
-            $('.photo').css({
-                'background-image': 'url(' + changeImage + ')'
-            })
-        })
-        $('.navi li').mouseleave(function () {
-            $('.photo').css({
-                'background-image': ''
-            })
-        })
-    </script>
-</body>
-
-</html>
-            
+<button id="fs-toggle">Toggle Fullscreen</button>
